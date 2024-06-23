@@ -26,6 +26,12 @@ services:
     volumes:
       - db:/data/db
 
+  mailhog:
+    image: mailhog/mailhog
+    restart: always
+    ports: # smtp 1025, http 8025
+      - 8025:8025
+
   backend:
     build: 
       context: .
