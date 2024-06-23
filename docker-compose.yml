@@ -23,6 +23,8 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: PASSWORD
     ports:
       - 27017:27017
+    volumes:
+      - db:/data/db
 
   backend:
     build: 
@@ -46,3 +48,4 @@ services:
 
 volumes:
   cdn:
+  db:
